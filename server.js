@@ -1,10 +1,14 @@
 // server.js — Volreon AI Instagram Akıllı Satış Asistanı Webhook Sunucusu
 const express = require('express');
+const path = require('path');
 const { config } = require('./config/env');
 const { generateReply } = require('./services/ai_engine');
 
 const app = express();
 app.use(express.json());
+
+// Sosyal medya görselleri için statik yayın
+app.use('/media', express.static(path.join(__dirname, 'public', 'media')));
 
 // Sağlık kontrolü (Railway & Monitoring için)
 app.get('/', (req, res) => {
