@@ -1,0 +1,20 @@
+{
+  "name": "volreon-instagram-asistan",
+  "version": "1.0.0",
+  "description": "Volreon AI — Akıllı Instagram Yapay Zeka Satış ve Destek Asistanı",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node scripts/test_assistant.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-fetch": "^2.7.0",
+    "openai": "^4.52.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
